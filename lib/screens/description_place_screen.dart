@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:travel_app/screens/review.dart';
 
 
 class DescriptionPlaceScreen extends StatelessWidget {
-  const DescriptionPlaceScreen({super.key});
+    final String descriptionPlace;
+    final String namePlace;
+    final int stars;
+        
+
+  const DescriptionPlaceScreen(
+    {super.key,
+     required this.descriptionPlace, 
+     required this.namePlace, 
+     required this.stars});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +22,7 @@ class DescriptionPlaceScreen extends StatelessWidget {
       fontWeight: FontWeight.bold,
     );
 
-    const descriptionText = 'Incididunt proident elit tempor id. Pariatur consequat ea officia occaecat cupidatat dolor fugiat labore ipsum consequat anim in dolore cupidatat. Veniam cupidatat sunt veniam dolor aliqua proident nisi in anim. Sint nostrud culpa officia culpa laboris ea et nisi deserunt adipisicing nostrud sunt excepteur culpa. Aute amet velit dolor quis esse aliqua. Ex laborum irure labore quis sit Lorem. \n\n Exercitation cillum tempor cupidatat Lorem sunt exercitation esse. Consequat dolor veniam mollit esse exercitation fugiat magna ad elit in adipisicing. Non consequat et cillum nulla id nisi mollit fugiat aliquip aute quis. Aliquip veniam dolore duis tempor ex culpa labore Lorem nulla est magna anim officia velit. Incididunt excepteur enim cillum veniam fugiat in dolor nostrud ex deserunt dolore exercitation. Ad adipisicing ut eiusmod ut est sit excepteur ullamco. Aliqua sunt do et ipsum reprehenderit sit esse laboris laborum.';
+    
 
     final star = Container(
       margin: const EdgeInsets.only(
@@ -21,7 +31,7 @@ class DescriptionPlaceScreen extends StatelessWidget {
       ),
       child: const Icon(
         Icons.star,
-        color: Colors.purple,
+        color: Color.fromARGB(255, 203, 47, 172),
       )
     );
 
@@ -32,7 +42,7 @@ class DescriptionPlaceScreen extends StatelessWidget {
         right: 20.0,
       ),
       child: Text(
-        descriptionText,
+        descriptionPlace,
         style: GoogleFonts.dosis(
           textStyle: const TextStyle(
             fontSize: 16.0,
@@ -50,7 +60,7 @@ class DescriptionPlaceScreen extends StatelessWidget {
           right: 20.0,
         ),
         child: const Text(
-          "Duwili",
+          "Duwili Ella",
           style: titleStyle,
           textAlign: TextAlign.left,
         ),
@@ -67,6 +77,7 @@ class DescriptionPlaceScreen extends StatelessWidget {
       children: [
         titleAndStars,
         description,
+        const Review(),
       ],
     );
   }
