@@ -31,7 +31,7 @@ class DescriptionPlaceScreen extends StatelessWidget {
       ),
       child: const Icon(
         Icons.star,
-        color: Color.fromARGB(255, 203, 47, 172),
+        color: Color.fromARGB(255, 243, 33, 33),
       )
     );
 
@@ -77,7 +77,6 @@ class DescriptionPlaceScreen extends StatelessWidget {
       children: [
         titleAndStars,
         description,
-        const Review(),
       ],
     );
   }
