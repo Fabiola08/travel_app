@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/screens/card_image_list.dart';
 import 'package:travel_app/screens/description_place_screen.dart';
 import 'package:travel_app/screens/gradient_back.dart';
 import 'package:travel_app/screens/review_list.dart';
@@ -31,7 +32,8 @@ class MainApp extends StatelessWidget {
         const ReviewList(),
               ],
             ),
-            const GradientBack(),
+            const GradientBack(title: 'Popular'),
+            const CardImageList(),
           ],
         ),
       ),
