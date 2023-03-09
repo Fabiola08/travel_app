@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/screens/small_button.dart';
 
 //stless
 
@@ -30,6 +31,13 @@ class CardImage extends StatelessWidget {
         ]
       ),
     );
-    return card;
+
+    //cada que se ocupa un widget arriba de otro se utilizaun Stack
+    return Stack(
+      alignment: const Alignment(0.9, 1.1),
+      children: [
+        card,
+        SmallButton()],
+    );
   }
 }

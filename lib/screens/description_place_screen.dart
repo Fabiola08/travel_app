@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:travel_app/screens/button_navigate.dart';
 import 'package:travel_app/screens/review.dart';
 
 
@@ -74,9 +75,11 @@ class DescriptionPlaceScreen extends StatelessWidget {
   );
 
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         titleAndStars,
         description,
+        const ButtonNavigate(buttonText: 'Más información...'),
       ],
     );
   }

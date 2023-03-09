@@ -6,7 +6,7 @@ class CardImageList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: 350.0,
       child: ListView(
         padding: const EdgeInsets.all(25.0),
