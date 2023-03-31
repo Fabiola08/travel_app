@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:travel_app/screens/button_navigate.dart';
-//import 'package:travel_app/screens/review.dart';
 
 
-class DescriptionPlaceScreen extends StatelessWidget {
+
+class DescriptionPlaceScreenP extends StatelessWidget {
     final String descriptionPlace;
     final String namePlace;
     final int stars;
         
 
-  const DescriptionPlaceScreen(
+  const DescriptionPlaceScreenP(
     {super.key,
      required this.descriptionPlace, 
      required this.namePlace, 
@@ -79,7 +78,6 @@ class DescriptionPlaceScreen extends StatelessWidget {
       children: [
         titleAndStars,
         description,
-        const ButtonNavigate(buttonText: 'Más información...'),
       ],
     );
   }
